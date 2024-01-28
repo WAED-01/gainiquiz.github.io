@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about.css">
+    <link rel="icon" type="image/png" href="icon2.png">
+    <title>Who Are We?</title>
+</head>
+
+<body style="overflow-y: scroll;">
+    <div id="custom-cursor"></div>
+    <main class="main">
+        <header class="header">
+            <a href="#" class="logo"> <img src="icon3.png" alt="Logo" style="height: 60px; margin-right: 10px;">GainIQ.</a>
+
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About</a>
+                <a href="#">Services</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <div class="slider-container">
+            <div class="slide">
+                <div class="heading-box">
+                    <h2>About Us:</h2>
+                </div>
+                <div class="content-box">
+                    <p>At GainIQ, we believe that learning should be fun and accessible to everyone. 
+                        Our platform is designed to make exploring general knowledge an exciting and interactive experience. 
+                        Whether you're a student looking to enhance your learning or someone who loves challenging their intellect,
+                         GainIQ is the place for you.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="heading-box">
+                    <h2>Mission and Vision:</h2>
+                </div>
+                <div class="content-box">
+                    <p>Our mission is to provide a platform where curiosity meets knowledge. 
+                        We envision a world where learning is a lifelong journey filled with discovery, 
+                        and our quizzes are crafted to inspire and engage users on this intellectual adventure.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="heading-box">
+                    <h2>Why Choose GainIQ?</h2>
+                </div>
+                <div class="content-box">
+                    <p>-Diverse Topics: Explore a wide range of quiz categories, 
+                        from science and history to pop culture and technology. There's something for everyone!
+
+                        <br/><br/>-Quality Assurance: Our quizzes are meticulously crafted,
+                         ensuring accuracy and relevance. 
+                         They are curated by experts passionate about sharing knowledge.
+                        
+                         <br/><br/>-User Engagement: Challenge your friends, track your scores, and climb the leaderboards. 
+                         QuizInfinite is not just about learning; it's about having fun while you do it!<br/><br/></span></p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="heading-box">
+                    <h2>Instructions:</h2>
+                </div>
+                <div class="content-box">
+                    <p>  1. Read each question carefully and choose the correct answer from the options provided.
+                        <br/><br/>2. Please be advised that you cannot click "Next" without choosing at least one option.
+                       <br/><br/>3. Your score is calculated based on the number of correct answers.
+                        <br/><br/>4. Green border means right answer and red for wrong.<br/><br/><br/><br/>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="footer">
+        &copy;ALL OF THE RIGHTS RESERVED 2023  &nbsp;&nbsp;&nbsp;  &emsp;&emsp; <u>Privacy and Policy</u>
+    </div>
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const customCursor = document.getElementById('custom-cursor');
+        
+          document.addEventListener('mousemove', function (e) {
+            customCursor.style.left = e.clientX + 'px';
+            customCursor.style.top = e.clientY + 'px';
+          });
+        
+          document.addEventListener('mouseout', function () {
+            customCursor.style.opacity = '0';
+          });
+        
+          document.addEventListener('mouseover', function () {
+            customCursor.style.opacity = '0.7';
+          });
+        
+          // Enhance cursor on hoverable elements
+          document.querySelectorAll('a, button, input').forEach(function (element) {
+            element.addEventListener('mouseenter', () => {
+              customCursor.style.transform = 'scale(1.5)';
+              customCursor.style.opacity = '1';
+            });
+            element.addEventListener('mouseleave', () => {
+              customCursor.style.transform = 'scale(1)';
+              customCursor.style.opacity = '0.7';
+            });
+          });
+        });
+        </script>
+        
+</body>
+
+</html>

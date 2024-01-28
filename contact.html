@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacts.</title>
+  <link rel="stylesheet" href="contact.css">
+  <link rel="icon" type="image/png" href="icon2.png">
+</head>
+
+<body>
+  <div id="custom-cursor"></div>
+
+  <main class="main">
+    <header class="header">
+      <a href="#" class="logo">   <img src="icon3.png" alt="Logo" style="height: 60px; margin-right: 10px;">GainIQ.</a>
+
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="#">Services</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </header>
+
+
+
+    <div style="padding: 100px;">
+      <h1 class="section-header">Contact us</h1>
+      <h2 class="question-header">Have a question, comment, or suggestion??
+        We'd love to hear from you! Use the form below to get in touch with us.</h2>
+
+      <div class="contact-wrapper">
+
+        <!-- Left contact page -->
+
+        <form id="contact-form" class="form-horizontal" role="form">
+
+          <div class="form-group">
+            <div class="col-sm-12">
+              <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-12">
+              <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+            </div>
+          </div>
+
+          <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+
+          <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+            <div class="alt-send-button">
+              <span class="send-text">SEND</span>
+            </div>
+
+          </button>
+
+        </form>
+
+        <!-- Left contact page -->
+
+        <div class="direct-contact-container">
+
+          <ul class="contact-list">
+            <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Turkey,
+                  Istanbul.</span></i></li>
+
+            <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a
+                    href="tel:1-212-555-5555" title="Give me a call">(212) 555-2368</a></span></i></li>
+
+            <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#"
+                    title="Send me an email">hijjawi.waed@gmail.com</a></span></i></li>
+
+          </ul>
+
+          <hr>
+          <ul class="social-media-list">
+            <li><a href="https://twitter.com/WaedHazem" target="_blank" class="contact-icon">
+                <div style="display: flex; width: 100%; justify-content: center;"><img src="twitter.png" alt=""
+                    style="width: 40px; margin-top:10px;">
+              </a>
+        </div>
+
+        </li>
+        <li><a href="https://www.instagram.com/waedhazem_?igsh=NTc4MTIwNjQ2YQ==" target="_blank" class="contact-icon">
+            <div style="display: flex; width: 100%; justify-content: center;"><img src="instagram (1).png" alt=""
+                style="width: 40px; margin-top:10px;">
+          </a>
+      </div>
+      </li>
+      <li><a href="https://www.facebook.com/profile.php?id=100001544562617&mibextid=LQQJ4d" target="_blank"
+          class="contact-icon">
+          <div style="display: flex; width: 100%; justify-content: center;"><img src="facebook-app-symbol.png" alt=""
+              style="width: 40px; margin-top:10px;">
+        </a>
+    </div>
+    </li>
+    <li><a href="https://wa.me/+905528583789" target="_blank" class="contact-icon">
+        <div style="display: flex; width: 100%; justify-content: center;"><img src="whatsapp.png" alt=""
+            style="width: 40px; margin-top:10px;">
+      </a></div>
+    </li>
+    </ul>
+    <hr>
+
+    <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+
+    </div>
+
+    </div>
+    </div>
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const customCursor = document.getElementById('custom-cursor');
+
+  document.addEventListener('mousemove', function (e) {
+    customCursor.style.left = e.clientX + 'px';
+    customCursor.style.top = e.clientY + 'px';
+  });
+
+  document.addEventListener('mouseout', function () {
+    customCursor.style.opacity = '0';
+  });
+
+  document.addEventListener('mouseover', function () {
+    customCursor.style.opacity = '0.7';
+  });
+
+  // Enhance cursor on hoverable elements
+  document.querySelectorAll('a, button, input').forEach(function (element) {
+    element.addEventListener('mouseenter', () => {
+      customCursor.style.transform = 'scale(1.5)';
+      customCursor.style.opacity = '1';
+    });
+    element.addEventListener('mouseleave', () => {
+      customCursor.style.transform = 'scale(1)';
+      customCursor.style.opacity = '0.7';
+    });
+  });
+});
+</script>
+
+</body>
+
+</html>
